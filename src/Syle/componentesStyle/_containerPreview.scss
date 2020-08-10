@@ -1,8 +1,16 @@
 .Home{
     background-color: #40424a;
+    padding: 30px;
 }
-.container-preview{
-    color: #dcddde;
-    padding: 60px 30px;
-    background-color: #40424a;
+
+.container-cards{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+
+.title-tendencias{
+    color: whitesmoke;
 }

@@ -1,9 +1,10 @@
 import React from 'react'
+import Playlist from '../Components/Playlist'
 
 function Series() {
     return (
         <div>
-            SERIES
+           <Playlist></Playlist>
         </div>
     )
 }
