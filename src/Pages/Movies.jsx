@@ -1,15 +1,14 @@
 import React from 'react'
 import ContainerPreview from "../Components/ContainerPreview"
 import { Link } from 'react-router-dom'
-import Playlist from '../Components/Playlist'
+import {trendingMoviesAPI} from "../helpers/index"
 
-function Movies() {
+const Movies = () => {
     return (
         <Link to="/playlist">
-            <div >
-                <ContainerPreview title="Peliculas Populares"/>
-                <Playlist />
-                <ContainerPreview title="Peliculas con Mejores Criticas"/>
+            <div className="Home" >
+                <ContainerPreview url={trendingMoviesAPI} title="Peliculas que son Tendencia"/>
+                <ContainerPreview url={trendingMoviesAPI} title="Peliculas que son Tendencia"/>
                 <ContainerPreview title="Peliculas a estrenarse"/>
                 <ContainerPreview title="Peliculas en Cine" />
             </div>
