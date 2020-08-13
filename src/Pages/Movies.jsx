@@ -5,14 +5,13 @@ import {trendingMoviesAPI} from "../helpers/index"
 
 const Movies = () => {
     return (
-        <Link to="/playlist">
+        
             <div className="Home" >
-                <ContainerPreview url={trendingMoviesAPI} title="Peliculas que son Tendencia"/>
-                <ContainerPreview url={trendingMoviesAPI} title="Peliculas que son Tendencia"/>
-                <ContainerPreview title="Peliculas a estrenarse"/>
-                <ContainerPreview title="Peliculas en Cine" />
+            <ContainerPreview media="movie" category="popular" />
+            <ContainerPreview media="movie" category="top_rated" />
+            <ContainerPreview media="movie" category="upcoming" />
+            <ContainerPreview media="movie" category="now_playing" />
             </div>
-        </Link>
     )
 }
 

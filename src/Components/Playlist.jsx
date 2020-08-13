@@ -1,30 +1,33 @@
 import React from 'react'
 import Card from "./Card"
-import {useGet} from "../Hooks/useGet"
-import {API_KEY, playlistMoviesAPI,} from "../helpers/index"
+import { useSearch } from '../Hooks/useSearch'
+import { useParams } from 'react-router-dom'
+import Paginado from './Paginado';
 
 function Playlist() {
-    const [data, isLoading, isError] = useGet(`${playlistMoviesAPI}1?api_key=${API_KEY}`)
-   
+    const {media,category,page} = useParams();
+    const [data, isLoading, isError] = useSearch(media, category,page)
 
     if (isError) return <div>Error...</div> 
 
-    return (
+    if(isLoading || !data) return "Cargando ...";
+
+    if(data){
+    
+    return (        
         <div>
-            {
-                isLoading || !data 
-                ? <div>Cargando...</div> 
-                : <div className="container-cards">
+           <div className="container-cards">
                 {
-                data.map(movie => (
+                data.results.map(movie => (
                     <Card movie={movie} />
                 ))
                 }
             </div>
-            }
+            <Paginado media={media} category={category} page={page} totalPage={data.total_pages}/>
         </div>
-    )
-        }
+        )
+    }
+}
 
 export default Playlist
 

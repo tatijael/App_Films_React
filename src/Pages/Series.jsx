@@ -1,10 +1,12 @@
 import React from 'react'
-import Playlist from '../Components/Playlist'
+import ContainerPreview from "../Components/ContainerPreview"
 
 function Series() {
     return (
         <div>
-            <Playlist></Playlist>
+            <ContainerPreview media="tv" category="popular" />
+            <ContainerPreview media="tv" category="top_rated" />
+            <ContainerPreview media="tv" category="on_the_air" />
         </div>
     )
 }

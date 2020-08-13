@@ -6,4 +6,4 @@ export const trendingSeriesAPI = `https://api.themoviedb.org/3/trending/tv/day?a
 
 export const playlistMoviesAPI = `https://api.themoviedb.org/3/trending/movie/pages/`
 
-export const playlistSeriesAPI = `https://api.themoviedb.org/3/tv/top_rated?api_key=${API_KEY}`
+// export const playlistSeriesAPI = `https://api.themoviedb.org/3/tv/top_rated?api_key=${API_KEY}`
