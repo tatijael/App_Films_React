@@ -22,7 +22,9 @@ const ContainerPreview = ({media, category}) => {
                 <div className="container-cards">
                         {
                         data.results.slice(0,5).map(movie => (
-                            <Card movie={movie} />
+                            <Link to={`/${media}/${movie.id}/info`}>
+                                <Card movie={movie} />
+                            </Link>
                         ))
                         }
                     </div>

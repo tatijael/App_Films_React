@@ -1,16 +1,18 @@
 .wrapper-card{
-    margin: 20px 10px;
+    margin: 20px 4px;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+    width: 235px;
 }
 
-.card{
-    // width: 50%;
+.card-img{
     position: relative;
     &:hover img{transform: scale(1.05);}
 }
 .titles{
     height: 40px;
+    box-sizing: border-box;
 }
 
 .card-img-top{

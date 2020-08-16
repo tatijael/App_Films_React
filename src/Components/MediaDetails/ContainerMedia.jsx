@@ -1,16 +1,14 @@
 import React from 'react'
-import { useParams, Link , Route} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useSearchInfo } from '../../Hooks/useSearchInfo';
-import Info from './components/Info';
-import { PropagateLoader } from 'react-spinners';
 import Nav from '../Nav';
 
 
 const ContainerMedia = () => {
 
-    const {id} = useParams();
+    const { media,id } = useParams();
    
-    const [data, isLoading, isError] = useSearchInfo('movie',id)
+    const [data, isLoading, isError] = useSearchInfo(media,id)
    
     return (
         <>

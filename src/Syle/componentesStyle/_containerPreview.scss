@@ -1,14 +1,16 @@
 .Home{
     background-color: #40424a;
     padding: 20px;
-    margin: 0 50px;
+    margin: 0 s50px;
 }
 
 .container-cards{
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     width: 100%;
     flex-wrap: wrap;
+
     
 }
 

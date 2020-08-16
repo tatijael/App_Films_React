@@ -27,7 +27,7 @@ function App() {
       <Route exact path="/:media/:category/page/:page">
         <Playlist/>
       </Route>
-      <Route path="/movie/:id">
+      <Route path="/:media/:id">
         <ContainerMedia />
       </Route>
       

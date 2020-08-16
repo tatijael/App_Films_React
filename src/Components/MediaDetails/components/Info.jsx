@@ -6,8 +6,10 @@ import { useParams } from 'react-router-dom';
 
 const Info = () => {
 
-    const {id} = useParams();
-    const [data, isLoading, isError] = useSearchInfo("movie", id)
+    const {media, id} = useParams();
+    const [data, isLoading, isError] = useSearchInfo(media, id)
+    
+    if(isError) return <div>Error...</div>
     
     return (
         <div>

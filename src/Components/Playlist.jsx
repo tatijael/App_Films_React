@@ -1,10 +1,10 @@
 import React from 'react'
-import Card from "./Card"
-
-import { useSearch } from '../Hooks/useSearch'
-import { useParams } from 'react-router-dom'
-import Paginado from './Paginado';
 import { PropagateLoader } from 'react-spinners';
+import { useParams, Link } from 'react-router-dom'
+
+import Card from "./Card"
+import { useSearch } from '../Hooks/useSearch'
+import Paginado from './Paginado';
 
 function Playlist() {
     const {media,category,page} = useParams();
@@ -21,7 +21,9 @@ function Playlist() {
         <div className="container-cards">
                 {
                 data.results.map(movie => (
-                    <Card movie={movie} />
+                    <Link to={`/${media}/${movie.id}/info`}>
+                        <Card movie={movie} />
+                    </Link>
                 ))
                 }
             </div>
