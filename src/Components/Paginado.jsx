@@ -38,9 +38,9 @@ function Paginado({media,category,page, totalPage}) {
     const items = getItems(Number(page), totalPage, getUrl)
 
     return (
-        <div>
+        <div className="paginado">
             {anterior  && <Link to={anterior} >Anterior</Link>}
-            <h4>{items}</h4>
+                <h6 className="items-paginado">{items}</h6>
             {siguiente  && <Link to={siguiente}>Siguiente</Link>}
         </div>
     )

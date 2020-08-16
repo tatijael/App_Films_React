@@ -8,6 +8,7 @@ import Series from './Pages/Series'
 import Header from './Components/Header'
 import "./Syle/main.scss";
 import Playlist from './Components/Playlist';
+import ContainerMedia from './Components/MediaDetails/ContainerMedia';
 
 function App() {
   return (
@@ -23,9 +24,13 @@ function App() {
           <Route exact path="/series">
             <Series />
           </Route>
-    <Route exact path="/:media/:category/page/:page">
+      <Route exact path="/:media/:category/page/:page">
         <Playlist/>
       </Route>
+      <Route path="/movie/:id">
+        <ContainerMedia />
+      </Route>
+      
     </Switch>
   </Router>
 

@@ -19,7 +19,7 @@ const ContainerPreview = ({media, category}) => {
                 isLoading && <div>Cargando...</div> 
             }
             {data &&
-                  <div className="container-cards">
+                <div className="container-cards">
                         {
                         data.results.slice(0,5).map(movie => (
                             <Card movie={movie} />

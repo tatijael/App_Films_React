@@ -1,7 +1,7 @@
 import { useGet } from "./useGet"
 import { URL_BASE } from "../helpers/api";
 
-export const useSearch = (media,query,page)=>{
+export const useSearch = (media,query,page = 1, subQuery)=>{
 
     const endpoint= query==="trending" 
     ? `/trending/${media}/week`

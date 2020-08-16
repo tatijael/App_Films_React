@@ -1,6 +1,9 @@
 .wrapper-card{
     margin: 50px 10px;
     background-color: #40424a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card{
@@ -9,6 +12,9 @@
     &:hover img{transform: scale(1.05);}
     border: solid red 2px;
     background-color: #40424a;
+}
+.titles{
+    height: 40px;
 }
 
 .card-img-top{
@@ -24,4 +30,5 @@
     
     .card-title{    
     margin-top: 10px;
+
 }
