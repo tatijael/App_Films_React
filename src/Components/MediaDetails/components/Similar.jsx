@@ -11,8 +11,7 @@ const Similar = ({media, id}) => {
     
     return (
         <div>{
-            data.results.map(element =>{
-              
+            data.results.map(element =>{ 
                 return <Card movie={element}/>
             })}
         </div>
