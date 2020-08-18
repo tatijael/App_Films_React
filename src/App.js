@@ -30,7 +30,6 @@ function App() {
       <Route path="/:media/:id">
         <ContainerMedia />
       </Route>
-      
     </Switch>
   </Router>
 

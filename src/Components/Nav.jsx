@@ -2,18 +2,33 @@ import React from 'react'
 import {Route, Link, useRouteMatch, Switch} from "react-router-dom";
 import Info from './MediaDetails/components/Info';
 import Similar from "./MediaDetails/components/Similar";
+import Reparto from "./MediaDetails/components/Reparto";
 
 const Nav = ({media, id}) => {
 
     let { path, url } = useRouteMatch();
+
     return (
         <div>
             <div>
                 <ul className="nav-list">
-                    <li className="list"><Link to={`${url}/info`}>INFO</Link></li>
-                    <li className="list"><Link to={`${url}/reparto`}>REPARTO</Link></li>
-                    <li className="list"><Link to={`${url}/similares`}>SIMILARES</Link></li>
-                    <li className="list"><Link to={`${url}/videos`}>VIDEOS</Link></li>
+                    <li className="list">
+                        <Link to={`${url}/info`}>INFO</Link>
+                        </li>
+                    <li className="list">
+                        <Link to={`${url}/reparto`}>REPARTO</Link>
+                        </li>
+                    <li className="list">
+                        <Link to={`${url}/similares`}>SIMILARES</Link>
+                        </li>
+                    {media === "movie" 
+                        ? <li className="list">
+                            <Link to={`${url}/videos`}>VIDEOS</Link>
+                        </li> 
+                        : <li className="list">
+                            <Link to={`${url}/episodios`}>EPISODIOS</Link>
+                        </li> }
+                    
                 </ul>
             </div>
             <Switch>
@@ -27,6 +42,9 @@ const Nav = ({media, id}) => {
                 <Similar media={media} id={id}/>
                 </Route>
                 <Route exact path={`${path}/reparto`}>
+                <Reparto media={media} id={id}/>
+                </Route>
+                <Route exact path={`${path}/episodios`}>
                 <Similar media={media} id={id}/>
                 </Route>
             </Switch>

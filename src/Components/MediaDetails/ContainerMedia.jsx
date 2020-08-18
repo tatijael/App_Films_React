@@ -18,7 +18,7 @@ const ContainerMedia = () => {
                             src={`https://image.tmdb.org/t/p/original/${data.backdrop_path || data.poster_path}`} 
                             alt="..."/>}
             </div>
-            <Nav media="movie" id={id} />
+            <Nav media={media} id={id} />
         </>
     )
 }
