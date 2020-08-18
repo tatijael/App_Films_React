@@ -2,7 +2,7 @@ import React from 'react'
 import {Route, Link, useRouteMatch, Switch} from "react-router-dom";
 import Info from './MediaDetails/components/Info';
 import Similar from "./MediaDetails/components/Similar";
-import Reparto from "./MediaDetails/components/Reparto";
+import Reparto from "./MediaDetails/components/Reparto/Reparto";
 
 const Nav = ({media, id}) => {
 

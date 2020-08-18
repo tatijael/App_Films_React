@@ -1,9 +1,9 @@
 import React from 'react'
 import {RiArrowRightLine} from "react-icons/ri";
 import { Link} from 'react-router-dom';
-import Card from './Card';
 import { useSearch } from '../Hooks/useSearch';
 import { useTitle } from '../Hooks/useTitle';
+import CardContainer from './CardContainer';
 
 const ContainerPreview = ({media, category}) => {
     const [data, isLoading, isError] = useSearch(media,category);
@@ -19,15 +19,7 @@ const ContainerPreview = ({media, category}) => {
                 isLoading && <div>Cargando...</div> 
             }
             {data &&
-                <div className="container-cards">
-                        {
-                        data.results.slice(0,5).map(movie => (
-                            <Link to={`/${media}/${movie.id}/info`}>
-                                <Card movie={movie} />
-                            </Link>
-                        ))
-                        }
-                    </div>
+                <CardContainer media={media} cards={data.results.slice(0,5)}></CardContainer>
             }
         </div>
 

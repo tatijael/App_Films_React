@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { RiHome3Line, RiVidiconLine, RiComputerLine, RiSearchLine } from "react-icons/ri";
+import { RiHome3Line, RiVidiconLine, RiComputerLine } from "react-icons/ri";
 import { NavLink } from "react-router-dom"
+import Search from './Search';
 
 
 const Header = () => {
@@ -37,10 +38,7 @@ const Header = () => {
             </ul>
             <form className="form">
                 <div className="input-group">
-                    <div className="input-group-prepend ">
-                        <span className="input-group-text input-grey"><RiSearchLine style={{marginLeft: 15}} color={'#fafafa'}size={27} className="icons-input" /></span>
-                        <input type="text"  className="form-control input-grey" placeholder="Busqueda..."/>
-                    </div>
+                    <Search />
                 </div>
             </form>
             </div>
