@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { RiSearchLine } from 'react-icons/ri'
-import { useHistory } from 'react-router-dom';
+import { useHistory     } from 'react-router-dom';
 
 const Search = () => {
 
@@ -8,28 +8,30 @@ const Search = () => {
 
     const history = useHistory();
 
-    const handleOnChange = event => setValue(event.target.value)
+    const handleChange = (event) => setValue(event.target.value)
 
-    const handleKeyDown = event => {
-        if(event.KeyCode === 13 && value){
+    const handleKeyDown = (event) => {
+       
+        if (event.keyCode === 13 && value) {
             history.push(`/multi/${value}/page/1`)
         }
-    }
+    };
 
-    return (
+    return ( 
+        
         <div className="input-group-prepend ">
             <span className="input-group-text input-grey">
-                <RiSearchLine 
+                <RiSearchLine
                 style={{marginLeft: 15}} 
                 color={'#fafafa'}size={27} 
                 className="icons-input" />
             </span>
             <input 
-                type="text"  
+                type="search"  
                 value={value}
                 className="form-control input-grey" 
                 placeholder="Busqueda..."
-                onChange={handleOnChange}
+                onChange={handleChange}
                 onKeyDown={handleKeyDown}
                 />
         </div>

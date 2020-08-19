@@ -36,11 +36,9 @@ const Header = () => {
                     </NavLink>
                 </li>
             </ul>
-            <form className="form">
                 <div className="input-group">
                     <Search />
                 </div>
-            </form>
             </div>
         </nav>
     )

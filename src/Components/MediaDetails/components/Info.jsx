@@ -1,14 +1,11 @@
 import React from 'react'
 import { useSearchInfo } from "../../../Hooks/useSearchInfo"
 import { PropagateLoader } from 'react-spinners';
-import { useParams } from 'react-router-dom';
 
 
-const Info = () => {
+const Info = ({media, id}) => {
 
-    const {media, id} = useParams();
     const [data, isLoading, isError] = useSearchInfo(media, id);
-    
     if(isError) return <div>Error...</div>
     
     if (!data) return <PropagateLoader />

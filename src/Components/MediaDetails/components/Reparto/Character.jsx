@@ -1,22 +1,13 @@
-// import React from 'react'
-// import { useSearchInfo } from '../../../../Hooks/useSearchInfo'
+import React from 'react'
 
-// const Character = ({media, id, cards}) => {
+const Character = ({media}) => {
 
-//     const [data, isLoading, isError] = useSearchInfo(media,id,'credits')
-
-//     return (
-//         <div className="movie-img">
-//         <div className="container-img">
-//             <img className="info-img" 
-//                 src={`https://image.tmdb.org/t/p/original/${data.poster_path}`} 
-//                 alt="..." /> 
-//         </div>
-//         <div className="movie-info">
+    
+    return (
+        <div>
             
-//         </div>
-//     </div>
-//     )
-// }
+        </div>
+    )
+}
 
-// export default Character
+export default Character

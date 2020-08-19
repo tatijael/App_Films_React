@@ -3,6 +3,7 @@ import {Route, Link, useRouteMatch, Switch} from "react-router-dom";
 import Info from './MediaDetails/components/Info';
 import Similar from "./MediaDetails/components/Similar";
 import Reparto from "./MediaDetails/components/Reparto/Reparto";
+import Episodios from './MediaDetails/components/Episodios';
 
 const Nav = ({media, id}) => {
 
@@ -27,16 +28,14 @@ const Nav = ({media, id}) => {
                         </li> 
                         : <li className="list">
                             <Link to={`${url}/episodios`}>EPISODIOS</Link>
-                        </li> }
-                    
+                        </li> }                
                 </ul>
             </div>
             <Switch>
                 <Route exact path={path}>
-                <h3>Please select a topic.</h3>
                 </Route>
                 <Route exact path={`${path}/info`}>
-                <Info/>
+                <Info media={media} id={id}/>
                 </Route>
                 <Route exact path={`${path}/similares`}>
                 <Similar media={media} id={id}/>
@@ -45,7 +44,7 @@ const Nav = ({media, id}) => {
                 <Reparto media={media} id={id}/>
                 </Route>
                 <Route exact path={`${path}/episodios`}>
-                <Similar media={media} id={id}/>
+                <Episodios media={media} id={id}/>
                 </Route>
             </Switch>
                         

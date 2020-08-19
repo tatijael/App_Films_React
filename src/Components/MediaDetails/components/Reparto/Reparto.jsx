@@ -2,11 +2,11 @@ import React from 'react'
 
 import { PropagateLoader } from 'react-spinners';
 import CardContainer from '../../../CardContainer';
-import { useSearch } from '../../../../Hooks/useSearch';
+import { useSearchInfo } from '../../../../Hooks/useSearchInfo';
 
 const Reparto = ({media, id}) => {
 
-    const [data, isLoading, isError] = useSearch(media,id,'credits')
+    const [data, isLoading, isError] = useSearchInfo(media,id,'credits')
     
     if(isError) return <div>Error...</div>
     
@@ -16,7 +16,7 @@ const Reparto = ({media, id}) => {
 
     return (
         <div className="container-cards">
-            {data && <CardContainer media={media} cards={data.cast}/>}
+            {data && <CardContainer media="person" cards={data.cast}/>}
         </div>
     )
     }
