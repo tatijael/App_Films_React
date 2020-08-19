@@ -1,9 +1,11 @@
 import React from 'react'
+import { useSearchInfo } from '../../../Hooks/useSearchInfo'
 
-const Episodios = () => {
+const Episodios = ({media, id}) => {
+    // const [data, isLoading, isError] = useSearchInfo(media, id, 'season')
     return (
         <div>
-            Episodios
+            
         </div>
     )
 }

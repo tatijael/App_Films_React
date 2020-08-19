@@ -4,6 +4,7 @@ import Info from './MediaDetails/components/Info';
 import Similar from "./MediaDetails/components/Similar";
 import Reparto from "./MediaDetails/components/Reparto/Reparto";
 import Episodios from './MediaDetails/components/Episodios';
+import Videos from './MediaDetails/components/Videos';
 
 const Nav = ({media, id}) => {
 
@@ -45,6 +46,9 @@ const Nav = ({media, id}) => {
                 </Route>
                 <Route exact path={`${path}/episodios`}>
                 <Episodios media={media} id={id}/>
+                </Route>
+                <Route exact path={`${path}/videos`}>
+                <Videos media={media} id={id}/>
                 </Route>
             </Switch>
                         
