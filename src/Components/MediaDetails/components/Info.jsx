@@ -1,17 +1,23 @@
 import React from 'react'
 import { useSearchInfo } from "../../../Hooks/useSearchInfo"
 import { PropagateLoader } from 'react-spinners';
+import SocialMedia from '../../socialMedia/SocialMedia';
 
 
 const Info = ({media, id}) => {
 
     const [data, isLoading, isError] = useSearchInfo(media, id);
+
+    const [externalIds] = useSearchInfo(media, id, "external_ids", "en-US");
+
     if(isError) return <div>Error...</div>
     
-    if (!data) return <PropagateLoader />
+    if (!data || !externalIds) return <PropagateLoader />
 
-    if(data) {
-        
+    
+    if(data && externalIds) {
+        const { facebook_id, imdb_id, instagram_id, twitter_id } = externalIds
+
         return (
             <div className="wrapper-info">
             {media === "movie" ?
@@ -34,6 +40,7 @@ const Info = ({media, id}) => {
                         <p>Producción : {data.production_companies.map(company => {
                                         return <span>{company.name}</span>
                         })}</p>
+                        
                     </div>
                 </div>
                 : 
@@ -56,6 +63,13 @@ const Info = ({media, id}) => {
                 </div>
             </div>
             }
+            <SocialMedia linksIds={{
+                facebook_id, 
+                imdb_id, 
+                instagram_id, 
+                twitter_id, 
+                homepage: data.homepage
+            }}/>
             </div>
         )  
     }

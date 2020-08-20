@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route, Link, useRouteMatch, Switch} from "react-router-dom";
+import {Route, Link, useRouteMatch, Switch, NavLink} from "react-router-dom";
 import Info from './MediaDetails/components/Info';
 import Similar from "./MediaDetails/components/Similar";
 import Reparto from "./MediaDetails/components/Reparto/Reparto";
@@ -15,20 +15,20 @@ const Nav = ({media, id}) => {
             <div>
                 <ul className="nav-list">
                     <li className="list">
-                        <Link to={`${url}/info`}>INFO</Link>
+                        <NavLink className="nav-links"  activeClassName="nav--links__active"  to={`${url}/info`}>INFO</NavLink>
                         </li>
                     <li className="list">
-                        <Link to={`${url}/reparto`}>REPARTO</Link>
+                        <NavLink activeClassName="nav--links__active" className="nav-links" to={`${url}/reparto`}>REPARTO</NavLink>
                         </li>
                     <li className="list">
-                        <Link to={`${url}/similares`}>SIMILARES</Link>
+                        <NavLink activeClassName="nav--links__active" className="nav-links" to={`${url}/similares`}>SIMILARES</NavLink>
                         </li>
                     {media === "movie" 
                         ? <li className="list">
-                            <Link to={`${url}/videos`}>VIDEOS</Link>
+                            <NavLink activeClassName="nav--links__active" className="nav-links" to={`${url}/videos`}>VIDEOS</NavLink>
                         </li> 
                         : <li className="list">
-                            <Link to={`${url}/episodios`}>EPISODIOS</Link>
+                            <NavLink activeClassName="nav--links__active" className="nav-links" to={`${url}/seasons/1`}>EPISODIOS</NavLink>
                         </li> }                
                 </ul>
             </div>
@@ -36,19 +36,19 @@ const Nav = ({media, id}) => {
                 <Route exact path={path}>
                 </Route>
                 <Route exact path={`${path}/info`}>
-                <Info media={media} id={id}/>
+                    <Info media={media} id={id}/>
                 </Route>
                 <Route exact path={`${path}/similares`}>
-                <Similar media={media} id={id}/>
+                    <Similar media={media} id={id}/>
                 </Route>
                 <Route exact path={`${path}/reparto`}>
-                <Reparto media={media} id={id}/>
+                    <Reparto media={media} id={id}/>
                 </Route>
-                <Route exact path={`${path}/episodios`}>
-                <Episodios media={media} id={id}/>
+                <Route path={`${path}/seasons/:season`}>
+                    <Episodios id={id}/>
                 </Route>
                 <Route exact path={`${path}/videos`}>
-                <Videos media={media} id={id}/>
+                    <Videos media={media} id={id}/>
                 </Route>
             </Switch>
                         

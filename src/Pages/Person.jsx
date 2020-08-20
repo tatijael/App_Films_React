@@ -12,7 +12,8 @@ function Person() {
     return (
         <div>
             <ul className="nav-list">
-                <li className="list"><Link to={`${url}/info`}>INFORMACION
+                <li className="list">
+                    <Link to={`${url}/info`}>INFORMACION
                 </Link></li>
                 <li className="list"><Link to={`${url}/credits`}>CREDITOS
                 </Link></li>

@@ -7,8 +7,27 @@
     margin: 10px 0px 10px;
     list-style: none;
     font-size: 20px;
+
 }
 
-.list{
-    padding: 10px;
+// .list{
+//     padding: 10px;
+// }
+
+.nav-links{
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+    color: #a8aaad;
+    padding-bottom: 10px;
+    text-decoration: none;
+        &:hover {  
+            color: #dcddde;
+        }
+       
+}
+
+.nav--links__active{
+    color: #dcddde;
+    border-bottom: 2px solid #dcddde;
 }

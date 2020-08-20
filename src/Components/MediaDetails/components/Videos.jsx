@@ -3,13 +3,13 @@ import { useSearchInfo } from '../../../Hooks/useSearchInfo'
 
 function Videos({media, id}) {
 
-    const [data, isLoading, isError] = useSearchInfo(media, id, 'videos')
+    const [data] = useSearchInfo(media, id, 'videos')
 
     if(data) {
 
     return (
         
-        <div>
+        <div className="videos">
             {data.results.map(video => (
                 <iframe 
                     id="player"           

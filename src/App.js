@@ -25,16 +25,16 @@ function App() {
           <Route exact path="/series">
             <Series />
           </Route>
-      <Route exact path="/:media/:category/page/:page">
-        <Playlist/>
-      </Route>
-      <Route path="/person/:id">
-     <Person />
-      </Route>
-      <Route path="/:media/:id">
-        <ContainerMedia />
-      </Route>
-    </Switch>
+          <Route exact path="/:media/:category/page/:page">
+            <Playlist/>
+          </Route>
+          <Route path="/person/:id">
+            <Person />
+          </Route>
+          <Route path="/:media/:id">
+            <ContainerMedia />
+          </Route>
+        </Switch>
   </Router>
 
     
