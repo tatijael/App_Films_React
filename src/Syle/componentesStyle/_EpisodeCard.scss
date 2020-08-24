@@ -1,0 +1,23 @@
+.episode-card{
+    width: 400px;
+    margin: 10px;
+    color: honeydew;
+}
+
+.title-episode{
+    color: #5194e0;
+}
+
+.overview-episode{
+    font-size: 12px;
+    margin: 5px;
+}
+
+.container-episode{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+

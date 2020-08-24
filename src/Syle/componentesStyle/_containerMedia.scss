@@ -1,6 +1,7 @@
 .poster-path{
     width: 100%;
     height: 600px;
+    // object-fit: cover
 }
 
 .background-gradient{
@@ -14,4 +15,5 @@
 .poster-path-img{
     width: 100%;
     height: 100%;
+    object-fit: cover
 }

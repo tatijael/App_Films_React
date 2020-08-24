@@ -1,4 +1,5 @@
 import React from 'react'
+import {RiArrowRightLine, RiArrowLeftLine} from "react-icons/ri";
 import { Link } from 'react-router-dom'
 
 const getItems = (current, totalPage, getUrl) => {
@@ -20,11 +21,11 @@ if (current - lowerLimite - offSet - 0) {
 
 
     for(let indice = lowerLimite; indice <= upperLimite; indice ++){
-    aux.push(<Link to={getUrl(indice)}>{indice}</Link>)
+    aux.push(<Link key={`pagination${indice}`}
+    className={`itemsPaginado`}to={getUrl(indice)}>{indice}</Link>)
     }
     return aux
 }
-
 
 function Paginado({media,category,page, totalPage}) {
 
@@ -37,11 +38,16 @@ function Paginado({media,category,page, totalPage}) {
     const siguiente= page < totalPage ? getUrl(Number(page)+1) : null;
     const items = getItems(Number(page), totalPage, getUrl)
 
+
     return (
         <div className="paginado">
-            {anterior  && <Link to={anterior} >Anterior</Link>}
-                <h6 className="items-paginado">{items}</h6>
-            {siguiente  && <Link to={siguiente}>Siguiente</Link>}
+            {anterior  && 
+            <Link className="link-paginado" to={anterior} >
+                <RiArrowLeftLine />  Anterior</Link>}
+            <h6 className="itemsPaginado">{items}{totalPage} </h6>
+            {siguiente  && 
+            <Link className="link-paginado"to={siguiente}>Siguiente 
+                <RiArrowRightLine /></Link>}
         </div>
     )
 }

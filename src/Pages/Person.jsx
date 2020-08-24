@@ -13,9 +13,9 @@ function Person() {
         <div>
             <ul className="nav-list">
                 <li className="list">
-                    <Link to={`${url}/info`}>INFORMACION
+                    <Link className="nav-links"to={`${url}/info`}>INFORMACION
                 </Link></li>
-                <li className="list"><Link to={`${url}/credits`}>CREDITOS
+                <li className="list"><Link className="nav-links" to={`${url}/credits`}>CREDITOS
                 </Link></li>
             </ul>
 

@@ -15,20 +15,34 @@ const Nav = ({media, id}) => {
             <div>
                 <ul className="nav-list">
                     <li className="list">
-                        <NavLink className="nav-links"  activeClassName="nav--links__active"  to={`${url}/info`}>INFO</NavLink>
+                        <NavLink className="nav-links"
+                                activeClassName="nav--links__active"  
+                                to={`${url}/info`}>INFO
+                        </NavLink>
                         </li>
                     <li className="list">
-                        <NavLink activeClassName="nav--links__active" className="nav-links" to={`${url}/reparto`}>REPARTO</NavLink>
+                        <NavLink activeClassName="nav--links__active" 
+                                className="nav-links" 
+                                to={`${url}/reparto`}>REPARTO
+                        </NavLink>
                         </li>
                     <li className="list">
-                        <NavLink activeClassName="nav--links__active" className="nav-links" to={`${url}/similares`}>SIMILARES</NavLink>
+                        <NavLink activeClassName="nav--links__active" 
+                                className="nav-links" 
+                                to={`${url}/similares`}>SIMILARES
+                            </NavLink>
                         </li>
                     {media === "movie" 
                         ? <li className="list">
-                            <NavLink activeClassName="nav--links__active" className="nav-links" to={`${url}/videos`}>VIDEOS</NavLink>
+                            <NavLink activeClassName="nav--links__active" 
+                            className="nav-links" to={`${url}/videos`}>VIDEOS
+                            </NavLink>
                         </li> 
                         : <li className="list">
-                            <NavLink activeClassName="nav--links__active" className="nav-links" to={`${url}/seasons/1`}>EPISODIOS</NavLink>
+                            <NavLink activeClassName="nav--links__active" 
+                                    className="nav-links" 
+                                    to={`${url}/seasons/1`}>EPISODIOS
+                            </NavLink>
                         </li> }                
                 </ul>
             </div>

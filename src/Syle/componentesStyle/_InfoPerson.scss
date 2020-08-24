@@ -1,3 +1,12 @@
 .info-person{
     display: flex;
 }
+
+.icon-social{
+    font-size: 20px;
+    margin: 5px;
+    color: white;
+        & :hover {
+            color: #5194e0;
+    }
+}

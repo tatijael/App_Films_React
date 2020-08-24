@@ -1,5 +1,5 @@
 import React from 'react'
-import {RiArrowRightLine} from "react-icons/ri";
+    import {RiArrowRightLine} from "react-icons/ri";
 import { Link} from 'react-router-dom';
 import { useSearch } from '../Hooks/useSearch';
 import { useTitle } from '../Hooks/useTitle';

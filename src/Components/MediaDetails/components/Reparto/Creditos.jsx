@@ -4,7 +4,6 @@ import CardContainer from '../../../CardContainer';
 
 const Creditos = ({id}) => {
     const [data] = useSearchInfo("person",id, "combined_credits");
-    console.log("dataaaa",data)
 
     if(data){
     return (

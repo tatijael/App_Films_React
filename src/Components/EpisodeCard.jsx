@@ -3,14 +3,15 @@ import React from 'react'
 const EpisodeCard = ({img, title, overview, episodeNumber}) => {
    
     return (
-        <div>
+        <div className="episode-card">
             <img src={`https://image.tmdb.org/t/p/w400/${img}`} 
-                alt={`title imagen`}
-            />
-            <h1>
-                EP{episodeNumber} - {title}
-            </h1>
-            <p>{overview}</p>
+                alt={`title imagen`}/>
+            <p className="title-episode">
+                EP{episodeNumber} 
+            </p>
+            -
+            <span className="title">{title}</span>
+            <p className="overview-episode">{overview}</p>
         </div>
     )
 }

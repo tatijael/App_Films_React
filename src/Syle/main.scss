@@ -12,9 +12,13 @@
 
 @import "./componentesStyle/Similar";
 
+@import "./componentesStyle/EpisodeCard";
+
 @import "./componentesStyle/Info";
 
 @import "./componentesStyle/InfoPerson";
+
+@import "./componentesStyle/Videos";
 
 @import "./Utils/variables";
 
@@ -22,4 +26,5 @@
 
 body {
     background-color: #40424a;
+    font-family:Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

@@ -10,27 +10,27 @@ const SocialMedia = ({linksIds}) => {
         <div>
         {imdb_id && (
             <a href={`https://www.imdb.com/title/${imdb_id}`}>
-                <FaImdb />
+                <FaImdb className="icon-social"/>
             </a>
         )}
         {facebook_id && (
             <a href={`https://www.facebook.com/${facebook_id}`}>
-                <FaFacebookF />
+                <FaFacebookF className="icon-social"/>
             </a>
         )}
         {instagram_id && (
             <a href={`https://www.instagram.com/${instagram_id}`}>
-                <FaInstagram />
+                <FaInstagram className="icon-social"/>
             </a>
         )}
         {twitter_id && (
             <a href={`https://www.instagram.com/${twitter_id}`}>
-                <FaTwitter />
+                <FaTwitter className="icon-social"/>
             </a>
         )}
          {homepage && (
         <a href={homepage}>
-          <FaLink />
+          <FaLink  className="icon-social"/>
         </a>
       )}
         </div>

@@ -40,6 +40,13 @@ const Info = ({media, id}) => {
                         <p>Producción : {data.production_companies.map(company => {
                                         return <span>{company.name}</span>
                         })}</p>
+                        <SocialMedia className="nav-list" linksIds={{
+                            facebook_id, 
+                            imdb_id, 
+                            instagram_id, 
+                            twitter_id, 
+                            homepage: data.homepage
+                        }}/>
                         
                     </div>
                 </div>
@@ -60,16 +67,18 @@ const Info = ({media, id}) => {
                     <p>Produccion : {data.production_companies.map(company => {
                                     return <span>{company.name}</span>
                     })}</p>
+                    <SocialMedia  linksIds={{
+                        facebook_id, 
+                        imdb_id, 
+                        instagram_id, 
+                        twitter_id, 
+                        homepage: data.homepage
+                    }}/>
                 </div>
+                
             </div>
             }
-            <SocialMedia linksIds={{
-                facebook_id, 
-                imdb_id, 
-                instagram_id, 
-                twitter_id, 
-                homepage: data.homepage
-            }}/>
+            
             </div>
         )  
     }

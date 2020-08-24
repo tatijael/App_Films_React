@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+
 .nav-list{
     display: flex;
     -webkit-box-pack: center;
@@ -10,24 +13,24 @@
 
 }
 
-// .list{
-//     padding: 10px;
-// }
-
 .nav-links{
     font-size: 20px;
     margin: 10px;
     font-weight: bold;
+    text-decoration: none;
     color: #a8aaad;
     padding-bottom: 10px;
-    text-decoration: none;
         &:hover {  
             color: #dcddde;
+            text-decoration: none;
         }
-       
 }
 
 .nav--links__active{
     color: #dcddde;
     border-bottom: 2px solid #dcddde;
+}
+
+.list{
+    font-family:Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
