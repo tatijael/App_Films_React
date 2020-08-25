@@ -12,7 +12,7 @@ const Info = ({media, id}) => {
 
     if(isError) return <div>Error...</div>
     
-    if (!data || !externalIds) return <PropagateLoader />
+    if (!data || !externalIds || isLoading) return <PropagateLoader />
 
     
     if(data && externalIds) {
