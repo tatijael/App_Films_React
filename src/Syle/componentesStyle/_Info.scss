@@ -19,6 +19,22 @@
 
 .movie-info{
     color: white;
-    width: 500px;
+    width: 450px;
     font-size: 12px;
+}
+
+@media (max-width: 600px){
+    .movie-info{
+        margin: 30px;
+        height: 600px;
+        
+    }
+
+    .info-img{
+        width: 100%;
+    }
+    .movie-img{
+        flex-direction: column;
+        
+    }
 }

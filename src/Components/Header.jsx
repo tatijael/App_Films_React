@@ -8,7 +8,7 @@ const Header = () => {
     const [menu, setMenu] = useState("home")
     
     return (
-        <nav className="navbar navbar-expand-lg">
+        <nav className="navbar navbar-expand">
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav" >
                 <li className="nav-item" >

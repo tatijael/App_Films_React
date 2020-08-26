@@ -15,3 +15,25 @@ body{
 .form-control{
     background-color:  rgb(35,39,42);
 } 
+@media (max-width: 600px){
+  .navbar{
+      width: 150%;
+}
+
+.navbar-nav{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 99;
+    background: black;
+    padding: 5px 0px;
+}
+
+.input-group-text{
+    padding: 0;
+}
+  }
+

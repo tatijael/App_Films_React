@@ -1,7 +1,7 @@
 .Home{
     background-color: #40424a;
     padding: 20px;
-    margin: 0 s50px;
+    margin: 0 5px
 }
 
 .container-cards{
@@ -16,4 +16,11 @@
 
 .title-tendencias{
     color: whitesmoke;
+}
+
+@media (max-width: 600px){
+
+    .overview{
+        width: 500px;
+    }
 }
